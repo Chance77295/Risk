@@ -1,6 +1,14 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
+import java.lang.StringBuilder;
+import java.util.Arrays;
+import java.util.Collections;
 import twitter4j.TwitterException;
 
 public class TestSetUp {
@@ -22,9 +30,11 @@ public class TestSetUp {
   }
 
   @Test 
-  public void runGameTest() throws TwitterException, IOException{
+  public void fortifyTest() {
+    Players player = new Players("Georgy",200);
+    RiskBoard board = new RiskBoard();
     setUpGame game = new setUpGame();
-    game.runningGame();
+    game.fortifyArmy(player, board, 30);    
 
   }
 }
