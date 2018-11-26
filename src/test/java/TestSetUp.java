@@ -22,6 +22,7 @@ public class TestSetUp {
     game.setArmyToCountry(true);
   }
 
+ /*
   @Test 
   public void fortifyTest() {
     Players player = new Players("Georgy",200);
@@ -33,6 +34,9 @@ public class TestSetUp {
 
     System.setIn(System.in);
   }
+  */
+
+  @Test
   public void doNOTfortifyTest() {
     Players player = new Players("Georgy",200);
     RiskBoard board = new RiskBoard();
@@ -44,6 +48,7 @@ public class TestSetUp {
     System.setIn(System.in);
   }
 
+  @Test
   public void listFortifyTest() {
     Players player = new Players("Georgy",200);
     RiskBoard board = new RiskBoard();
