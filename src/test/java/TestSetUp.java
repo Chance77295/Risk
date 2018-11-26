@@ -33,4 +33,25 @@ public class TestSetUp {
 
     System.setIn(System.in);
   }
+  public void doNOTfortifyTest() {
+    Players player = new Players("Georgy",200);
+    RiskBoard board = new RiskBoard();
+    setUpGame game = new setUpGame();
+    ByteArrayInputStream in = new ByteArrayInputStream("-1".getBytes());
+    System.setIn(in);
+    game.fortifyArmy(player, board, 30);
+
+    System.setIn(System.in);
+  }
+
+  public void listFortifyTest() {
+    Players player = new Players("Georgy",200);
+    RiskBoard board = new RiskBoard();
+    setUpGame game = new setUpGame();
+    ByteArrayInputStream in = new ByteArrayInputStream("1".getBytes());
+    System.setIn(in);
+    game.fortifyArmy(player, board, 30);
+
+    System.setIn(System.in);
+  }
 }
