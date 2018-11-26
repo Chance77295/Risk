@@ -1,15 +1,8 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import java.util.Scanner;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
-import java.lang.StringBuilder;
-import java.util.Arrays;
-import java.util.Collections;
 import twitter4j.TwitterException;
+import java.io.ByteArrayInputStream;
 
 public class TestSetUp {
 
@@ -34,7 +27,10 @@ public class TestSetUp {
     Players player = new Players("Georgy",200);
     RiskBoard board = new RiskBoard();
     setUpGame game = new setUpGame();
-    game.fortifyArmy(player, board, 30);    
+    ByteArrayInputStream in = new ByteArrayInputStream("China".getBytes());
+    System.setIn(in);
+    game.fortifyArmy(player, board, 30);
 
+    System.setIn(System.in);
   }
 }
