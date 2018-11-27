@@ -372,12 +372,12 @@ public class setUpGame {
 
   public void runningGame() throws TwitterException, IOException {
 
-    postTwitter = new PostTwitter();
-    timeoutPlayer = new TimeoutPlayer(30);
-    createdBoard = false;
-    nPlayerTurn = 0;
+    PostTwitter postTwitter = new PostTwitter();
+    TimeoutPlayer timeoutPlayer = new TimeoutPlayer(30);
+    boolean createdBoard = false;
+    int nPlayerTurn = 0;
 
-    deck = new Deck();
+    Deck deck = new Deck();
     deck.shuffle();
     if(deck.shuffle()){
       System.out.println("The deck has been shuffled.");

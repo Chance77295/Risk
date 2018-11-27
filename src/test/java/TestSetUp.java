@@ -48,6 +48,13 @@ public class TestSetUp {
     System.setIn(System.in);
   }
 
+  @Test
+  public void runningGameTest() throws TwitterException, IOException{
+    setUpGame game = new setUpGame();
+    game.runningGame();
+
+  }
+
   /*
   @Test
   public void listFortifyTest() {
