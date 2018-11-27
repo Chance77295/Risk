@@ -25,5 +25,14 @@ public class TestBinaryObserver {
     binaryObserver.update();
   }
 
+  @Test
+  public void notificationDemoTest() {
+    Subject subject = new Subject();
+    new BinaryObserver(subject);
+    subject.setState(1);
+    subject.setState(0);
+
+  }
+
 
 }
