@@ -48,6 +48,7 @@ public class TestSetUp {
     System.setIn(System.in);
   }
 
+  /*
   @Test
   public void listFortifyTest() {
     Players player = new Players("Georgy",200);
@@ -59,4 +60,6 @@ public class TestSetUp {
 
     System.setIn(System.in);
   }
+*/
+
 }
