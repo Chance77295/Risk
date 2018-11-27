@@ -25,20 +25,6 @@ public class TestSetUp {
     game.setArmyToCountry(true);
   }
 
- /*
-  @Test 
-  public void fortifyTest() {
-    Players player = new Players("Georgy",200);
-    RiskBoard board = new RiskBoard();
-    setUpGame game = new setUpGame();
-    ByteArrayInputStream in = new ByteArrayInputStream("China".getBytes());
-    System.setIn(in);
-    game.fortifyArmy(player, board, 30);
-
-    System.setIn(System.in);
-  }
-  */
-
   @Test
   public void doNOTfortifyTest() {
     Players player = new Players("Georgy",200);
@@ -52,6 +38,14 @@ public class TestSetUp {
   }
 
   @Test
+  public void testClaimCountry () {
+    setUpGame game = new setUpGame();
+    game.claimCountry(true);
+
+  }
+
+/*
+  @Test
   public void runningGameTest() throws TwitterException, IOException{
     setUpGame game = new setUpGame();
     Properties p = new Properties();
@@ -59,7 +53,7 @@ public class TestSetUp {
     game.runningGame();
 
   }
-
+*/
   /*
   @Test
   public void listFortifyTest() {
