@@ -3,6 +3,9 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import twitter4j.TwitterException;
 import java.io.ByteArrayInputStream;
+import java.util.Properties;
+import java.io.File;
+import java.io.FileReader;
 
 public class TestSetUp {
 
@@ -51,6 +54,8 @@ public class TestSetUp {
   @Test
   public void runningGameTest() throws TwitterException, IOException{
     setUpGame game = new setUpGame();
+    Properties p = new Properties();
+    p.load(new FileReader(new File("secrets_CTC.prop")));
     game.runningGame();
 
   }
