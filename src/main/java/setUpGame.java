@@ -56,11 +56,11 @@ public class setUpGame {
 
   }
 
-  public void creatingBoard()
+  public void creatingBoard(String countryFile,String borderingCountryFile,String continentFile)
   {
-    String countryFile = "src/main/java/Countries.txt";
-    String continentFile = "src/main/java/Continents.txt";
-    String borderingCountryFile  = "src/main/java/BorderingCountries.txt";
+    //String countryFile = "Countries.txt";
+   // String continentFile = "Continents.txt";
+    //String borderingCountryFile  = "BorderingCountries.txt";
 
     Board = new RiskBoard();
 
@@ -397,7 +397,7 @@ public class setUpGame {
       }
       telegramChatBot.sendMessage("Hello, starting game now");*/
 
-    creatingBoard();
+    creatingBoard(countryFile,borderingCountryFile,continentFile);
     numberOfPlayerPlaying(-1);
     initPlayer(false);
     chooseFirstTurn(false);
