@@ -58,6 +58,10 @@ public class setUpGame {
 
   public void creatingBoard()
   {
+    String countryFile = "Countries.txt";
+    String continentFile = "Continents.txt";
+    String borderingCountryFile  = "BorderingCountries.txt";
+
     Board = new RiskBoard();
 
 	  try{
