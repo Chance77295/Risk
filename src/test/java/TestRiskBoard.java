@@ -47,7 +47,7 @@ public class TestRiskBoard {
                     "Yakutsk","Eastern Australia","Indonesia","LotR","New Guinea","Western Australia"};
         final String[] continents = {"North America","South America", "Australia", "Asia", "Africa", "Europe"};
         String fileLine;
-       BufferedReader reader = new BufferedReader(new FileReader("BorderingCountries.txt"));
+       BufferedReader reader = new BufferedReader(new FileReader("src/test/java/BorderingCountries.txt"));
   		StringBuilder stringBuilder = new StringBuilder();
   		while((fileLine = reader.readLine()) != null){
   			stringBuilder.append(fileLine);
