@@ -15,9 +15,9 @@ import twitter4j.TwitterException;
 
 public class setUpGame {
 
-  String countryFile = "Countries.txt";
-  String continentFile = "Continents.txt";
-  String borderingCountryFile  = "BorderingCountries.txt";
+  String countryFile = "src/main/java/Countries.txt";
+  String continentFile = "src/main/java/Continents.txt";
+  String borderingCountryFile  = "src/main/java/BorderingCountries.txt";
   String fileLine;
   String fileInput;
   BufferedReader reader;
