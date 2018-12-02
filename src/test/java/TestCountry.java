@@ -21,11 +21,11 @@ public class TestCountry {
     Country country = new Country("China");
     Players player = new Players("Georgy",5);
 
+    country.setPlayer(player);
     country.setNumberOfArmies(player.getNumOfArmies());
     country.getArmies();
 
     country.incArmies(1);
-    country.getArmies();
     country.decArmies(1);
   }
 
