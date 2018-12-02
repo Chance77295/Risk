@@ -25,6 +25,7 @@ public class TestCountry {
     country.getArmies();
 
     country.incArmies(1);
+    country.getArmies();
     country.decArmies(1);
   }
 
