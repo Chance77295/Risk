@@ -6,7 +6,8 @@ import java.io.IOException;
 public class TestMain {
 
     @Test
-    public void testMain(String[] args) throws TwitterException, IOException {
+    public void testMain() throws TwitterException, IOException {
+        String[] args = null;
         Main.main(args);
     }
 
