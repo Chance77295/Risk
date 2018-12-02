@@ -21,7 +21,7 @@ public class TestPlayerHand {
     hand.add(card1);
     hand.add(card2);
     hand.add(card3);
-    hand.removeFromHand(0,1,2);
+    hand.removeFromHand(1,2,3);
   }
 
   @Test
@@ -33,7 +33,7 @@ public class TestPlayerHand {
     hand.add(card1);
     hand.add(card2);
     hand.add(card3);
-    hand.removeFromHand(0,1,2);
+    hand.removeFromHand(1,2,3);
   }
 
 }

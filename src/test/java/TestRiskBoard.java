@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class TestRiskBoard {
-
+/*
   @Test
   public void testSetBoard() throws FileNotFoundException,IOException {
         setUpGame game = new setUpGame();
@@ -64,6 +64,7 @@ public class TestRiskBoard {
         board.returnNumOfArmies("China");
 
   }
+  */
   @Test
   public void testReturnMap(){
     
