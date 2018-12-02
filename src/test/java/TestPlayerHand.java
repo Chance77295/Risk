@@ -24,5 +24,14 @@ public class TestPlayerHand {
     hand.removeFromHand(0,1,2);
   }
 
+  @Test
+  public void testInvalidTradeIn() {
+    playerHand hand = new playerHand();
+    Card card1 = new Card("Infantry", "Japan");
+    Card card2 = new Card("Infantry", "China");
+    hand.add(card1);
+    hand.add(card2);
+    hand.removeFromHand(0,1,2);
+  }
 
 }
