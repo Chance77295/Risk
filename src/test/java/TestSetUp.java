@@ -25,6 +25,18 @@ public class TestSetUp {
     game.setArmyToCountry(true);
   }
 
+  @Test 
+  public void tooFewPlayers(){
+    setUpGame game = new setUpGame();
+    game.numberOfPlayerPlaying(1);
+  }
+
+  @Test 
+  public void tooManyPlayers(){
+    setUpGame game = new setUpGame();
+    game.numberOfPlayerPlaying(8);
+  }
+
   @Test
   public void doNOTfortifyTest() {
     Players player = new Players("Georgy",200);
