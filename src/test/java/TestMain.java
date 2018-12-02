@@ -7,7 +7,7 @@ public class TestMain {
 
     @Test
     public void testMain() throws TwitterException, IOException {
-        String[0] args = "TEST";
+        String[] args = null;
         Main.main(args);
     }
 

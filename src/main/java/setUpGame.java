@@ -493,10 +493,6 @@ public class setUpGame {
   }
 }
 
-public void runningGame(Boolean testunit){
-  System.out.println("Testing Main method...");
-}
-
 public static void purchaseCredits(Players player, float ftimeLeft) {
   Thread threadTimeOut;
   threadTimeOut = new Thread(new TimeoutPlayer(ftimeLeft));
