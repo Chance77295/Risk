@@ -12,7 +12,8 @@ public class TestSetUp {
   @Test
   public void initBoardGame() {
     setUpGame game = new setUpGame();
-    game.creatingBoard("src/test/java/Countries.txt","src/test/java/BorderingCountries.txt","src/test/java/Continents.txt");
+    RiskBoard Board = new RiskBoard();
+    game.creatingBoard("src/test/java/Countries.txt","src/test/java/BorderingCountries.txt","src/test/java/Continents.txt", Board);
 
     game.numberOfPlayerPlaying(3);
 
@@ -40,6 +41,7 @@ public class TestSetUp {
   @Test
   public void testClaimCountry () {
     setUpGame game = new setUpGame();
+    RiskBoard Board = new RiskBoard();
     final String[] countries = {"Alaska","Alberta","Central America","Eastern United States",
 								"Greenland","Northwest Territory","Ontario","Quebec","Western United States",
 								"Argentina","Brazil","Venezuela","Great Britain","Iceland","Northern Europe",
@@ -51,32 +53,89 @@ public class TestSetUp {
     final String[] borders = {};
     RiskBoard board = new RiskBoard();
     board.SetBoard(countries, continents, borders);
-    game.claimCountry(true);
+    game.claimCountry(true,Board);
 
   }
 
-/*
   @Test
-  public void runningGameTest() throws TwitterException, IOException{
+  public void TestTwoPlayers() {
     setUpGame game = new setUpGame();
-    Properties p = new Properties();
-    p.load(new FileReader(new File("secrets_CTC.prop")));
-    game.runningGame();
+    RiskBoard Board = new RiskBoard();
 
+    game.creatingBoard("src/test/java/Countries.txt","src/test/java/BorderingCountries.txt","src/test/java/Continents.txt", Board);
+
+    game.numberOfPlayerPlaying(2);
+
+    game.initPlayer(true);
+
+    game.chooseFirstTurn(true);
+
+    game.setArmyToCountry(true);
   }
-*/
-  /*
+
   @Test
-  public void listFortifyTest() {
-    Players player = new Players("Georgy",200);
-    RiskBoard board = new RiskBoard();
+  public void TestFourPlayers() {
     setUpGame game = new setUpGame();
-    ByteArrayInputStream in = new ByteArrayInputStream("1".getBytes());
-    System.setIn(in);
-    game.fortifyArmy(player, board, 30);
+    RiskBoard Board = new RiskBoard();
 
-    System.setIn(System.in);
+    game.creatingBoard("src/test/java/Countries.txt","src/test/java/BorderingCountries.txt","src/test/java/Continents.txt", Board);
+
+    game.numberOfPlayerPlaying(4);
+
+    game.initPlayer(true);
+
+    game.chooseFirstTurn(true);
+
+    game.setArmyToCountry(true);
   }
-*/
+
+  @Test
+  public void TestFivePlayers() {
+    setUpGame game = new setUpGame();
+    RiskBoard Board = new RiskBoard();
+
+    game.creatingBoard("src/test/java/Countries.txt","src/test/java/BorderingCountries.txt","src/test/java/Continents.txt", Board);
+
+    game.numberOfPlayerPlaying(5);
+
+    game.initPlayer(true);
+
+    game.chooseFirstTurn(true);
+
+    game.setArmyToCountry(true);
+  }
+
+  @Test
+  public void TestSixPlayers() {
+    setUpGame game = new setUpGame();
+    RiskBoard Board = new RiskBoard();
+
+    game.creatingBoard("src/test/java/Countries.txt","src/test/java/BorderingCountries.txt","src/test/java/Continents.txt", Board);
+
+    game.numberOfPlayerPlaying(6);
+
+    game.initPlayer(true);
+
+    game.chooseFirstTurn(true);
+
+    game.setArmyToCountry(true);
+  }
+
+  public void TestClaimCountry() {
+    setUpGame game = new setUpGame();
+    RiskBoard Board = new RiskBoard();
+
+    game.creatingBoard("src/test/java/Countries.txt","src/test/java/BorderingCountries.txt","src/test/java/Continents.txt", Board);
+
+    game.numberOfPlayerPlaying(3);
+
+    game.initPlayer(true);
+
+    game.chooseFirstTurn(true);
+
+    game.claimCountry(true,Board);
+
+    game.setArmyToCountry(true);
+  }
 
 }

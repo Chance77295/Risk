@@ -56,13 +56,13 @@ public class setUpGame {
 
   }
 
-  public void creatingBoard(String countryFile,String borderingCountryFile,String continentFile)
+  public void creatingBoard(String countryFile,String borderingCountryFile,String continentFile, RiskBoard Board)
   {
     //String countryFile = "Countries.txt";
    // String continentFile = "Continents.txt";
     //String borderingCountryFile  = "BorderingCountries.txt";
 
-    Board = new RiskBoard();
+    //Board = new RiskBoard();
 
 	  try{
   		BufferedReader reader = new BufferedReader(new FileReader(countryFile));
@@ -222,7 +222,7 @@ public class setUpGame {
     }
   }
 
-  public void claimCountry(boolean testUnit)
+  public void claimCountry(boolean testUnit, RiskBoard Board)
   {
     // Set up - Claim territories
     int nCountriesClaim = Board.returnCountries().size();
@@ -380,6 +380,7 @@ public class setUpGame {
     TimeoutPlayer timeoutPlayer = new TimeoutPlayer(30);
     boolean createdBoard = false;
     int nPlayerTurn = 0;
+    RiskBoard Board = new RiskBoard();
 
     Deck deck = new Deck();
     deck.shuffle();
@@ -397,11 +398,11 @@ public class setUpGame {
       }
       telegramChatBot.sendMessage("Hello, starting game now");*/
 
-    creatingBoard(countryFile,borderingCountryFile,continentFile);
+    creatingBoard(countryFile,borderingCountryFile,continentFile, Board);
     numberOfPlayerPlaying(-1);
     initPlayer(false);
     chooseFirstTurn(false);
-    claimCountry(false);
+    claimCountry(false,Board);
     setArmyToCountry(false);
 
 
