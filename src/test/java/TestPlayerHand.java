@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
 
 public class TestPlayerHand {
 
@@ -21,7 +22,7 @@ public class TestPlayerHand {
     hand.add(card1);
     hand.add(card2);
     hand.add(card3);
-    hand.removeFromHand(1,2,3);
+    hand.removeFromHand(0,1,2);
   }
 
   @Test
@@ -33,7 +34,7 @@ public class TestPlayerHand {
     hand.add(card1);
     hand.add(card2);
     hand.add(card3);
-    hand.removeFromHand(1,2,3);
+    hand.removeFromHand(0,1,2);
   }
 
 }

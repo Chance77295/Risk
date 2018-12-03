@@ -13,6 +13,7 @@ public class TestCountry {
     country.getPlayer();
 
     country.occupied();
+    country.getBorders();
   }
 
   @Test

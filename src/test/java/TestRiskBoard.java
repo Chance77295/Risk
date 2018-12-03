@@ -69,8 +69,8 @@ public class TestRiskBoard {
   public void testReturnMap(){
     
     String countryFile = "src/test/java/Countries.txt";
-    String borderingCountryFile = "src/test/java/Countries.txt";
-    String continentFile = "src/test/java/Countries.txt";
+    String borderingCountryFile = "src/test/java/BorderingCountries.txt";
+    String continentFile = "src/test/java/Continents.txt";
     String fileLine;
     RiskBoard board = new RiskBoard();
     
