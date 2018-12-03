@@ -131,7 +131,7 @@ public class TestRiskBoard {
     String continentFile = "src/test/java/Continents.txt";
     String fileLine;
     RiskBoard board = new RiskBoard();
-    Players player = new Player("Georgy",10);
+    Players player = new Players("Georgy",10);
     
     try{
   		BufferedReader reader = new BufferedReader(new FileReader(countryFile));
