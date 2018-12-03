@@ -22,7 +22,7 @@ public class TestPlayerHand {
     hand.add(card1);
     hand.add(card2);
     hand.add(card3);
-    hand.removeFromHand(0,0,0);
+    hand.removeFromHand(0,1,2);
   }
 
   @Test
@@ -34,7 +34,7 @@ public class TestPlayerHand {
     hand.add(card1);
     hand.add(card2);
     hand.add(card3);
-    hand.removeFromHand(0,0,0);
+    hand.removeFromHand(0,1,2);
   }
   @Test
   public void testInvalidTradeIn() {
@@ -45,7 +45,7 @@ public class TestPlayerHand {
     hand.add(card1);
     hand.add(card2);
     hand.add(card3);
-    hand.removeFromHand(0,0,0);
+    hand.removeFromHand(0,1,2);
   }
 
 }
