@@ -14,7 +14,7 @@ public class TestPlayerHand {
     hand.getHand();
   }
   @Test
-  public void testTradeIn() {
+  public void testSameCardTradeIn() {
     playerHand hand = new playerHand();
     Card card1 = new Card("Infantry", "Japan");
     Card card2 = new Card("Infantry", "China");
@@ -22,11 +22,11 @@ public class TestPlayerHand {
     hand.add(card1);
     hand.add(card2);
     hand.add(card3);
-    hand.removeFromHand(0,1,2);
+    hand.removeFromHand(0,0,0);
   }
 
   @Test
-  public void testInvalidTradeIn() {
+  public void testUniqueCardsTradeIn() {
     playerHand hand = new playerHand();
     Card card1 = new Card("Infantry", "Japan");
     Card card2 = new Card("Cavalry", "China");
@@ -34,7 +34,18 @@ public class TestPlayerHand {
     hand.add(card1);
     hand.add(card2);
     hand.add(card3);
-    hand.removeFromHand(0,1,2);
+    hand.removeFromHand(0,0,0);
+  }
+  @Test
+  public void testInvalidTradeIn() {
+    playerHand hand = new playerHand();
+    Card card1 = new Card("Infantry", "Japan");
+    Card card2 = new Card("Infantry", "China");
+    Card card3 = new Card("Artillery", "Indonesia");
+    hand.add(card1);
+    hand.add(card2);
+    hand.add(card3);
+    hand.removeFromHand(0,0,0);
   }
 
 }

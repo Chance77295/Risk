@@ -167,7 +167,7 @@ public class TestRiskBoard {
 		}catch(IOException e) {
 			System.out.println(e.getMessage());
     }
-    board.returnExtraArmies("Asia");
+    //board.returnExtraArmies("Asia");
 
     board.setPlayer("China", player);
     board.returnPlayer("China");
